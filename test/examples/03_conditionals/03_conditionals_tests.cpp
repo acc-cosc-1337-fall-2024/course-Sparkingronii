@@ -60,3 +60,15 @@ TEST_CASE("Verity is vowel function")
 	REQUIRE(is_vowel('b') == false);
 	REQUIRE(is_vowel('m') == false);
 }
+
+
+TEST_CASE("Verify the get generation function")
+{
+	REQUIRE(get_generation(2030) == "Invalid Year");
+	REQUIRE(get_generation(2000) == "Centennial");
+	REQUIRE(get_generation(1980) == "Millenial");
+	REQUIRE(get_generation(1970) == "Generation X");
+	REQUIRE(get_generation(1950) == "Baby Boomer");
+	REQUIRE(get_generation(1930) == "Silent Generation");
+	REQUIRE(get_generation(1900) == "Invalid Year");
+}
