@@ -1,5 +1,4 @@
-﻿const double tax_rate = 0.0675;
-
+﻿
 //example
 int add_numbers(int num1, int num2);
 

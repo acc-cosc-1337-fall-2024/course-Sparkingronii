@@ -7,16 +7,18 @@ int add_numbers(int num1, int num2)
 }
 
 //write function code here
-double tax_amount(double get_sales_tax, double tax_rate)
+double get_sales_tax(double meal_amount)
 {
-	tax_rate = 0.0675;
 
-	return get_sales_tax * tax_rate;
-
+	double tax = meal_amount * 0.0675;
+	
+	return tax;
 
 }
 
-double tip_amount(double meal_amount, double tip_rate)
+double get_tip_amount(double meal_amount, double tip_rate)
 {
-	return meal_amount * tip_rate;
+	double tip = meal_amount * tip_rate;
+
+	return tip;
 }
