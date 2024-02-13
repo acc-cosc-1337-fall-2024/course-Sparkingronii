@@ -17,7 +17,8 @@ double total = 0;
 cout<<"Meal Amount: ";
 cin>>meal_amount;
 
-tax_amount = get_sales_tax(meal_amount);
+tax_amount = get_sales_tax(meal_amount) * tax_rate;
+
 
 cout<<"Tip Rate: ";
 cin>>tip_rate;
