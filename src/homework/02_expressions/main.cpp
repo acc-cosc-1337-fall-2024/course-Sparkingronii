@@ -29,7 +29,7 @@ total = tip_amount + tax_amount + meal_amount;
 
 cout<<"Meal Amount: "<<meal_amount<< "\n";
 cout<<"Tip Amount: "<<tip_amount<< "\n";
-cout<<"Sales Amount: "<<tax_amount<< "\n";
+cout<<"Sales Tax: "<<tax_amount<< "\n";
 cout<<"Total: "<<total<< "\n";
 
 	return 0;
