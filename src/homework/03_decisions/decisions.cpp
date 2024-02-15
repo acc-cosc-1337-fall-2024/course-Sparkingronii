@@ -44,19 +44,19 @@ string get_letter_grade_using_switch(int Grade)
     switch (Grade)
     {
         case 90 ... 100:
-            result = "Grade A";
+            result = "A";
             break;
         case 80 ... 89:
-            result = "Grade B";
+            result = "B";
             break;
         case 70 ... 79:
-            result = "Grade C";
+            result = "C";
             break;
         case 60 ... 69:
-            result = "Grade D";
+            result = "D";
             break;
         case 00 ... 59:
-            result = "Grade F";
+            result = "F";
             break;
         default:
             result = "Out of Range";
