@@ -13,7 +13,7 @@ int main()
 
 	cout<<"Choose an Option: ";
 	cin>>Option;
-	cout<<Option;
+	cout<<Option<<"\n";
 
 	if (Option == 1)
 	{
