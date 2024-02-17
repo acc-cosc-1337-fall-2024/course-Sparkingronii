@@ -30,7 +30,7 @@ int main()
 
 		cout<<result<<"\n";
 
-		return 0;
+		return result;
 	}
 
 	if (Option == 2)
@@ -50,14 +50,11 @@ int main()
 
 		cout<<result<<"\n";
 
-		return 0;
+		return result;
 	}
 
 	else if (Option == 3)
 	{
-		auto choice = 'y';
-
-		if(choice == 'y' || 'Y')
-		return;
+		return 0;
 	}
 }
