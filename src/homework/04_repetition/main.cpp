@@ -30,7 +30,7 @@ int main()
 
 		cout<<result<<"\n";
 
-		return result;
+		return 0;
 	}
 
 	if (Option == 2)
@@ -50,7 +50,7 @@ int main()
 
 		cout<<result<<"\n";
 
-		return result;
+		return 0;
 	}
 
 	else if (Option == 3)
