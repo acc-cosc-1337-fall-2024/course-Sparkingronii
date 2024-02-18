@@ -7,7 +7,7 @@
 int factorial(int num)
 {
     //auto start = 1;
-    auto sum = 0;
+    auto sum = 1;
 
     for( int i =1; i <= num; ++i)
     {
