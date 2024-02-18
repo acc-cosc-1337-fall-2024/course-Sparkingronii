@@ -6,13 +6,13 @@
 
 int factorial(int num)
 {
-    auto start = 1;
-    auto sum = 1;
+    //auto start = 1;
+    auto sum = 0;
 
-    while(num > 1)
+    for( int i =1; i <= num; ++i)
     {
-        sum *= start;
-        start --;
+        sum *= i;
+        //start --;
     }
 
     return sum;
