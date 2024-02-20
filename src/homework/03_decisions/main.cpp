@@ -5,6 +5,8 @@ using std::cin; using std::cout; using std::string;
 
 int main() 
 {
+	while ( 1 == true)
+	{
 	int Option;
 	cout<<"MENU"<<"\n";
 	cout<<"Option 1-Letter grade using if"<<"\n";
@@ -49,7 +51,7 @@ int main()
 
 	else if (Option == 3)
 	{
-		return 0;
+		break;
 	}
-
+	}
 }
