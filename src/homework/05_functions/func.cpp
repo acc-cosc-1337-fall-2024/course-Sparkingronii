@@ -17,7 +17,7 @@ for (int i = 0; i < length; i++)
         {
             ++ countG;
         }
-    }
+    } return countG;
 
 //char LetterC = 'C';
 int countC = 0;
@@ -27,9 +27,9 @@ for (int i = 0; i < length; i++)
         {
             ++ countC;
         }
-    }
+    } return countC;
 
-double GC_Content = countG + countC / length;
+double GC_Content = (countG + countC) / length;
 return GC_Content;
 }
 
@@ -51,6 +51,15 @@ string reverse_string(string DNA)
 
 string get_dna_complement(string DNA)
 {
+//int length = DNA.size();
+   //int rev = length - 1;
+   //for(int i=0; i<(length/2); i++)
+   //{
+        //char temp = DNA[i];
+        //DNA[i] = DNA[rev];
+        //DNA[rev] = temp;
+        //rev = rev-1;
+   //}
 int length = DNA.size();
 for(int i=0; i < length; i++)
     {
