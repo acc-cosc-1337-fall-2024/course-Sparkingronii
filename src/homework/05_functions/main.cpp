@@ -37,15 +37,15 @@ while(true)
 		{
 	
 			string DNA = 0;
-			string DNA_Reverse = 0;
+			//string DNA_Reverse = 0;
 			string DNA_Complement = 0;
 
 			cout<<"Enter DNA Sequence: ";
 			cin>>DNA;
 
-			DNA_Reverse = reverse_string(DNA);
+			//DNA_Reverse = reverse_string(DNA);
 
-			DNA_Complement = get_dna_complement(DNA_Reverse);
+			DNA_Complement = get_dna_complement(DNA);
 
 			cout<<"The DNA Complement is: "<<DNA_Complement<<"\n";
 
