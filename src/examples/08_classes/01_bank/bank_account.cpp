@@ -17,6 +17,10 @@ void BankAccount::withdraw(int amount)
     }
 }
 
+void BankAccount::get_balance_from_db()
+{
+    balance = rand() % 10000 + 1;
+}
 
 
 //End of code block of functions that belong to the BankAccount class
