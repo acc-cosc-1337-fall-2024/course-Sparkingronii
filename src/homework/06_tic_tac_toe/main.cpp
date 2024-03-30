@@ -4,7 +4,7 @@
 #include<vector>
 using std::cin;
 using std::cout;
-using std::string:
+using std::string;
 
 int main() 
 {
