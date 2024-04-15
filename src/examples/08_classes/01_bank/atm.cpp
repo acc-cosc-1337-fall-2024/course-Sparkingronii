@@ -1,33 +1,50 @@
 //atm.cpp
 #include "atm.h"
-
 using std::cout; using std::cin;
 
 void ATM::display_balance()
 {
     cout<<"Balance: "<<account.get_balance();
+    auto& customer = customers[customer_index];
+
+    auto& account = customer.get_account(account_index);
+    cout<<"Balance: "<<account->get_balance();
 }
 
 void ATM::make_deposit()
 {
+    auto& customer = customers[customer_index];
     auto amount = 0;
     cout<<"Enter deposit amount: ";
     cin>>amount;
     account.deposit(amount);
 
+    auto& account = customer.get_account(account_index);
+    account->deposit(amount);
+
 }
 
 void ATM::make_withdraw()
 {
+    auto& customer = customers[customer_index];
     auto amount = 0;
     cout<<"Enter withdraw amount: ";
     cin>>amount;
     account.withdraw(amount);
+
+    auto& account = customer.get_account(account_index);
+    account->withdraw(amount);
+}
+
+void ATM::scan_card()
+{
+    customer_index = rand() % customers.size();
+    cout<<"Enter 1 for Checking 2 for Savings: ";
+    cin>>account_index;
+    account_index -= 1;
 }
 
 //End of code block of functions that belong to the ATM class
-
-
 //free functions---not part of the class 
 void display_menu()
 {
@@ -36,7 +53,6 @@ void display_menu()
     cout<<"3-Withdraw\n";
     cout<<"\n4-Exit\n";
 }
-
 void run_menu(ATM& atm)
 {
     auto menu_choice = 0;
@@ -47,14 +63,26 @@ void run_menu(ATM& atm)
         cout<<"Enter option\n";
         cin>>menu_choice;
         handle_menu(menu_choice, atm);
+    do{    
 
     } while (menu_choice != 4);
 
+        atm.scan_card();
+
+        do
+        {
+            display_menu();
+            cout<<"Enter option\n";
+            cin>>menu_choice;
+            handle_menu(menu_choice, atm);
+
+        } while (menu_choice != 4);
+
+    } while (true);
 }
 
 void handle_menu(int choice, ATM& atm)
 {
-
     switch (choice)
     {
     case 1:
@@ -70,9 +98,6 @@ void handle_menu(int choice, ATM& atm)
         break;
     case 4:
         cout<<"Exiting.../n";
-        break;
-
-    default:
         break;
     }
 }

@@ -3,7 +3,6 @@
 #include "bank_account.h"
 #include "checking_account.h"
 #include "savings_account.h"
-
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
@@ -12,24 +11,23 @@ TEST_CASE("Test bank account get balance ")
 	CheckingAccount account;
 	REQUIRE(account.get_balance() == 0);
 }
-
 TEST_CASE("Test savings account get balance")
 {
 	SavingsAccount account;
 	REQUIRE(account.get_balance() == 0);
+	REQUIRE(account.get_balance() == 5);
 }
 
 TEST_CASE("Test bank account constructor with one parameter")
 {
 	CheckingAccount account(500);
-
 	REQUIRE(account.get_balance() == 500);
 }
-
 TEST_CASE("Test savings account with one constructor parameter")
 {
 	SavingsAccount account(500);
 	REQUIRE(account.get_balance() == 500);
+	REQUIRE(account.get_balance() == 505);
 }
 
 TEST_CASE("Test case deposit with default constructor")

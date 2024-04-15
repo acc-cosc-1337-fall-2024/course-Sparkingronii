@@ -13,6 +13,16 @@ iterate with auto
 
 int main() 
 {
+	std::vector<std::unique_ptr<Shape>> shapes;
+	std::unique_ptr<Shape> c = std::make_unique<Circle>();
 
+	shapes.push_back(std::make_unique<Circle>());
+	shapes.push_back(std::make_unique<Line>());
+	shapes.push_back(std::move(c));
+
+	for(auto& shape: shapes)
+	{
+		shape->draw();
+	}
 	return 0;
 }
